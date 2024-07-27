@@ -16,8 +16,8 @@ app.use(expressSession({
     saveUninitialized: true,
     secret: process.env.EXPRESS_SESSION_SECRET
 }))
-app.use(cookieParser())
 app.use(express.json())
+app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }))
 app.use(logger('tiny'));
 
